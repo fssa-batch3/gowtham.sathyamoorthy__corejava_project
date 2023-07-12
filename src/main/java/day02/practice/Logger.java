@@ -40,6 +40,7 @@ public class Logger {
 public static void main(String[]args) {
 	Logger.debug("Debug message");
 	Logger.debug(42);
+	Logger.debug(true);
 	Logger.error(8);
 	Logger.error(true);
 	Logger.info(false);
