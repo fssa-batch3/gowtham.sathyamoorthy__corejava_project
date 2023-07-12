@@ -43,16 +43,16 @@ public class User {
 		one.SetPass("A0074");
 		
 		System.out.println("User 1");
-		System.out.println("Name" + " = " + one.getName());
-		System.out.println("Email" + " = " + one.getEmail());
-		System.out.println("Password" + " = " +  one.getPass());
+		System.out.println("Name = " + one.getName());
+		System.out.println("Email = " + one.getEmail());
+		System.out.println("Password = " +  one.getPass());
 		
 		System.out.println();
 		User two = new User("settu" , "settu@gmail.com", "A1111");
 		System.out.println("User 2");
-		System.out.println("Name" + " = " + two.getName());
-		System.out.println("Email" + " = " + two.getEmail());
-		System.out.println("Password" + " = " + two.getPass());
+		System.out.println("Name = " + two.getName());
+		System.out.println("Email = " + two.getEmail());
+		System.out.println("Password = " + two.getPass());
 		
 	}
 }
