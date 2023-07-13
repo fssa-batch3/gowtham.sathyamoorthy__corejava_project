@@ -36,7 +36,7 @@ class Square extends Rectangle {
 	}
 
 	public static void main(String[] args) {
-		Square square = new Square(5.0);
+		Square square = new Square(8.0);
 
 		double length = square.getLength();
 		System.out.println("Length: " + length);
