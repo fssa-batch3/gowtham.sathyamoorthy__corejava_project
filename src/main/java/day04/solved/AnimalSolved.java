@@ -5,10 +5,6 @@ package day04.solved;
 
 import java.time.LocalDate;
 
-/**
- * @author Vinit Gore
- *
- **/
 
 class Animal {
 	// Attributes
