@@ -1,4 +1,4 @@
-package day05.practice;
+package day05.practice.packageOne;
 
 public class Account {
     private String accNo;
