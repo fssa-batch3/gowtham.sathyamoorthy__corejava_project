@@ -14,7 +14,8 @@ public class RemoveDuplicateArray{
         cityList.add("Lucknow");
 
         ArrayList<String> duplicateList = new ArrayList<String>();
-        for (String list : cityList) {
+        for (String list : 
+        	cityList) {
             if (!duplicateList.contains(list)) {
             	duplicateList.add(list);
             }

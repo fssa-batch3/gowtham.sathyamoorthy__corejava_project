@@ -43,7 +43,7 @@ public class Account {
 	    public boolean deposit(Account account, double amount) {
 	        account.setBalance(account.getBalance() + amount);
 	        return true;
-	    }
+	    } 
 
 	    @Override
 	    public boolean withdraw(Account account, double amount) throws Exception {
