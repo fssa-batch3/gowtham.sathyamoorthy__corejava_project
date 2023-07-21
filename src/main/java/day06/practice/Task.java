@@ -45,5 +45,10 @@ public class Task {
 		}
 
 	}
+
+	public Object getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	}
 
