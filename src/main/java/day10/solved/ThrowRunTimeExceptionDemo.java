@@ -3,7 +3,6 @@ package day10.solved;
 import day06.practice.Task;
 
 class NewTaskValidator {
-
 	public static boolean validate(Task task)  {
 		if (task == null)
 			throw new IllegalArgumentException("Task is null");
@@ -13,20 +12,12 @@ class NewTaskValidator {
 	}
 }
 
-/**
- * Example for demonstrating Exception Hierarchy
- * showing how RuntimeExceptions are handled.
- */
+
 public class ThrowRunTimeExceptionDemo {
 	public static void main(String[] args) {
 		Task task = new Task();
 //		task.setName("Creating test case"); Commenting this so that exception is thrown
 		// Not surrounding with try catch as Illegal is a runtime exception
-		ThrowRunTimeExceptionDemo.validate(task);
-	}
-
-	private static void validate(Task task) {
-		// TODO Auto-generated method stub
-		
+		NewTaskValidator.validate(task);
 	}
 }
