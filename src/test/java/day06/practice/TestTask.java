@@ -1,53 +1,53 @@
 package day06.practice;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	import java.util.ArrayList;
-	class adddTask {
+import org.junit.jupiter.api.Test;
 
-		private int taskId;
-		String taskName;
-		private String description;
+public class TestTask {
+	@Test
+	public void checkArrayListTaskNameData() {
+		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
+		System.out.println("The task name is : Finish report");
+		if (one.getName().equals(one.taskName)) {
+			System.out.println("Pass");
 
-		// Constructor
-		public adddTask(int taskId, String taskName, String description) {
-			this.taskId = taskId;
-			this.taskName = taskName;
-			this.description = description;
+		} else {
+			System.out.println("Fail");
+
 		}
 
-		@Override
-		public String toString() {
-			return "taskID: " + taskId + ", taskName: " + taskName + ", description: " + description;
-		}
+		assertEquals(one.getName(), one.taskName);
 	}
-	public class TestTask {
-		public boolean findTaskByName(String name, ArrayList<addTask> taskList) {
-			boolean check = false;
 
-			for (addTask value : taskList) {
-				if (value.taskName.equals(name)) {
-					check = true;
-					break;
-				}
+	@Test
+	public void checkArrayListTaskDescriptionData() {
+		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
+		System.out.println("The task description is complete the quarterly sales report.");
 
-			}
-			return check;
-		}
+		if (one.getDescription().equals(one.description)) {
+			System.out.println("Pass");
 
-		public static void main(String[] args) {
-
-			ArrayList<addTask> taskList = new ArrayList<>();
-
-			taskList.add(new addTask(1, "Task 1", "Complete practice"));
-			taskList.add(new addTask(2, "Task 2", "Do FacePrep Sums."));
-			taskList.add(new addTask(3, "Task 3", "Prepare for the CPR."));
-
-			for (addTask task : taskList) {
-				System.out.println(task);
-			}
+		} else {
+			System.out.println("Fail");
 
 		}
+
+		assertEquals(one.getDescription(), one.description);
+	}
+
+	@Test
+	public void checkArrayListTaskIdData() {
+		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
+		System.out.println("The task ID is " + 1);
+		if (one.getId() == one.taskId) {
+			System.out.println("Pass");
+
+		} else {
+			System.out.println("Fail");
+
 		}
 
-
-
+		assertEquals(one.getId(), one.taskId);
+	}
+}

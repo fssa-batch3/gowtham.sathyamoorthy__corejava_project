@@ -1,12 +1,15 @@
 package day08.practice;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
 
 public class TestRepeatedKeyCounter {
 
-	public static void main(String[] args) {
+	@Test
+	public void checkRepeatedKey() {
+
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the string: ");
 		String input = scanner.nextLine();
@@ -30,6 +33,5 @@ public class TestRepeatedKeyCounter {
 		nameCount.forEach((key, value) -> System.out.println(key + ": " + value));
 
 		scanner.close();
-
 	}
 }

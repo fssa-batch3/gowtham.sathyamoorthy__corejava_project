@@ -1,30 +1,24 @@
 package day06.practice;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
-	import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 
-	public class TestRemoveDuplicateArray {
-	    public static void main(String[] args) {
-	        // Create an ArrayList with duplicate elements
-	        ArrayList<String> cityList = new ArrayList<String>();
-	        cityList.add("Chennai");
-	        cityList.add("Chennai");
-	        cityList.add("Mumbai");
-	        cityList.add("Mumbai");
-	        cityList.add("Delhi");
-	        cityList.add("Lucknow");
+public class TestRemoveDuplicateArray {
+	@Test
+	public static void main(String[] args) {
+		List<String> cityList = new ArrayList<String>();
+		cityList.add("Chennai");
+		cityList.add("Bangalore");
+		cityList.add("Mumbai");
+		cityList.add("Mumbai");
 
-	        ArrayList<String> duplicateList = new ArrayList<String>();
-	        for (String list : 
-	        	cityList) {
-	            if (!duplicateList.contains(list)) {
-	            	duplicateList.add(list);
-	            }
-	        }
+		System.out.println("ArrayList with duplicates: " + cityList);
 
-	        for (String lists : duplicateList) {
-	            System.out.println(lists);
-	        }
-	    }
+		List<String> newList = cityList.stream().distinct().collect(Collectors.toList());
+
+		System.out.println("ArrayList with duplicates removed: " + newList);
 	}
-
+}

@@ -1,60 +1,53 @@
 package day07.practice;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Objects;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 public class TestTask {
+	@Test
+	public void checkArrayListTaskNameData() {
+		Task one = new Task("Swimming", 1, "2023-07-22");
+		System.out.println("The task name is : Finish report");
+		if (one.getName().equals(one.name)) {
+			System.out.println("Pass");
 
-	private int id;
-	private String name;
-	private LocalDate deadline;
+		} else {
+			System.out.println("Fail");
 
-	public TestTask(String name, int id, String date) {
-			this.name = name;
-			this.id = id;
-			this.deadline = LocalDate.parse(date);
 		}
 
-	@Override
-	public String toString() {
-		return "Task : " + name + ", Deadline :" + deadline + ", Id :" + id;
+		assertEquals(one.getName(), one.name);
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
+	@Test
+	public void checkArrayListTaskDeadlineData() {
+		Task one = new Task("Swimming", 1, "2023-07-22");
+		System.out.println("The task deadline is 2023-07-22");
+
+		if (one.getDeadLine().equals(one.deadline)) {
+			System.out.println("Pass");
+
+		} else {
+			System.out.println("Fail");
+
 		}
-		if (obj == null || getClass() != obj.getClass()) {
-			return false;
-		}
-		TestTask task = (TestTask) obj;
-		return id == task.id && Objects.equals(name, task.name) && Objects.equals(deadline, task.deadline);
+
+		assertEquals(one.getDeadLine(), one.deadline);
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, name, deadline);
-	}
+	@Test
+	public void checkArrayListTaskIdData() {
+		Task one = new Task("Swimming", 1, "2023-07-22");
+		System.out.println("The task ID is " + 1);
+		if (one.getId() == one.id) {
+			System.out.println("Pass");
 
-	public static void main(String[] args) {
-		ArrayList<Task> arr = new ArrayList<>();
-		Task task1 = new Task("Swimming", 1, "2023-07-22");
-		Task task4 = new Task("Swimming", 1, "2023-07-22");
-		Task task2 = new Task("Gardening", 2, "2015-06-05");
-		Task task3 = new Task("Playing with pets", 3, "2033-09-30");
-		arr.add(task1);
-		arr.add(task2);
-		arr.add(task3);
-		arr.add(task4);
+		} else {
+			System.out.println("Fail");
 
-		HashSet<Task> distinctTask = new HashSet<>(arr);
-
-		for (Task i : distinctTask) {
-			System.out.println(i);
 		}
 
+		assertEquals(one.getId(), one.id);
 	}
 }
