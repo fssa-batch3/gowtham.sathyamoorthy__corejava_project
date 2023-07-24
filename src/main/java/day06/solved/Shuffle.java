@@ -8,7 +8,7 @@ public class Shuffle {
 		List<String> list = new ArrayList<>();
 		list.add("cse");
 		list.add("mech");
-		list.add("eee");
+		list.add("Eee");
 		System.out.println(list);
 		Collections.shuffle(list);
 		System.out.println(list);

@@ -8,7 +8,7 @@ public class TestAccount {
 	@Test
 	public void checkInitialAxisBankBalance() {
 		double balance = 50000;
-		TestAccount axisAccount = new Account("AX001", balance);
+		Account axisAccount = new Account("AX001", balance);
 		double initialBalance = axisAccount.getBalance();
 
 		if (initialBalance == balance) {
@@ -27,7 +27,7 @@ public class TestAccount {
 		double balance = 4500;
 		double withdraw = 2000;
 		ATM axisATM = new AxisATM();
-		TestAccount axisAccount = new Account("AX001", balance);
+		Account axisAccount = new Account("AX001", balance);
 
 		String result = "";
 
@@ -49,7 +49,7 @@ public class TestAccount {
 		double balance = 4500;
 		double withdraw = 2000;
 		ATM axisATM = new AxisATM();
-		TestAccount axisAccount = new Account("AX001", balance);
+		Account axisAccount = new Account("AX001", balance);
 
 		String result = "";
 
@@ -69,7 +69,7 @@ public class TestAccount {
 	@Test
 	public void checkDepositAxisBank() {
 		double balance = 4500;
-		TestAccount axisAccount = new Account("AX001", balance);
+		Account axisAccount = new Account("AX001", balance);
 		double initialBalance = axisAccount.getBalance();
 
 		if (initialBalance == balance) {
@@ -86,7 +86,7 @@ public class TestAccount {
 	@Test
 	public void checkInitialICICIBankBalance() {
 		double balance = 2100;
-		TestAccount iciciAccount = new Account("AX001", balance);
+		Account iciciAccount = new Account("AX001", balance);
 		double initialBalance = iciciAccount.getBalance();
 
 		if (initialBalance == balance) {

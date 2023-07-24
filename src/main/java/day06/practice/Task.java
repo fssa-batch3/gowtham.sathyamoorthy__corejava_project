@@ -1,24 +1,44 @@
 package day06.practice;
+
 import java.util.ArrayList;
+
 class addTask {
 
-	private int taskId;
+	int taskId;
 	String taskName;
-	private String description;
+	String description;
 
-	// Constructor
 	public addTask(int taskId, String taskName, String description) {
 		this.taskId = taskId;
 		this.taskName = taskName;
 		this.description = description;
 	}
 
+	public void setName(String taskName) {
+		this.taskName = taskName;
+	}
+
+	public String getName() {
+		return taskName;
+	}
+
+	public int getId() {
+		return taskId;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
 	@Override
 	public String toString() {
 		return "taskID: " + taskId + ", taskName: " + taskName + ", description: " + description;
 	}
+
 }
+
 public class Task {
+
 	public boolean findTaskByName(String name, ArrayList<addTask> taskList) {
 		boolean check = false;
 
@@ -36,19 +56,17 @@ public class Task {
 
 		ArrayList<addTask> taskList = new ArrayList<>();
 
-		taskList.add(new addTask(1, "Task 1", "Complete practice"));
-		taskList.add(new addTask(2, "Task 2", "Do FacePrep Sums."));
-		taskList.add(new addTask(3, "Task 3", "Prepare for the CPR."));
+		taskList.add(new addTask(1, "Finish report", "Complete the quarterly sales report."));
+		taskList.add(new addTask(2, "Buy groceries", "Purchase items for the week."));
+		taskList.add(new addTask(3, "Study for assessment", "Prepare for the upcoming Java exam."));
 
 		for (addTask task : taskList) {
 			System.out.println(task);
 		}
 
-	}
+		Task one = new Task();
 
-	public Object getName() {
-		// TODO Auto-generated method stub
-		return null;
+		boolean result = one.findTaskByName("Finish report", taskList);
+		System.out.println("Your given task present is " + result);
 	}
-	}
-
+}

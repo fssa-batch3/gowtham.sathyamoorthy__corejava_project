@@ -53,10 +53,6 @@ public class TestUser {
 		assertEquals(user.getPassword(), password);
 	}
 
-	public static void main(String[] args) {
-		import static org.junit.jupiter.api.Assertions.assertEquals;
-		
-		import org.junit.jupiter.api.Test;
-	}
+
 
 }

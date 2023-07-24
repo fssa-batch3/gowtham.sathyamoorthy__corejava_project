@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class TestTask {
+
 	@Test
 	public void checkArrayListTaskNameData() {
 		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
@@ -50,4 +51,5 @@ public class TestTask {
 
 		assertEquals(one.getId(), one.taskId);
 	}
+
 }
