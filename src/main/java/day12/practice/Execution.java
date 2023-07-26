@@ -9,14 +9,14 @@ public class Execution {
 		TaskDAO taskDAO = new TaskDAO();
 
 		Task newTask = new Task();
-		newTask.id = 14;
-		newTask.name = "Playing in garden";
+		newTask.id = 15;
+		newTask.name = "learning java";
 		newTask.status = "Pending";
 		taskDAO.createTask(newTask);
 
 		Task existingTask = new Task();
 		existingTask.id = 1;
-		existingTask.name = "Going to outing";
+		existingTask.name = "Tech Cpr";
 		existingTask.status = "Waiting";
 		taskDAO.updateTask(existingTask);
 

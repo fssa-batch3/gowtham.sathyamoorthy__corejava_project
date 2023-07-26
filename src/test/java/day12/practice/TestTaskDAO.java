@@ -14,9 +14,9 @@ public class TestTaskDAO {
 		TaskDAO taskDAO = new TaskDAO();
 
 		Task one = new Task();
-		one.id = 7;
-		one.name = "Play with rain";
-		one.status = "Waiting for rain";
+		one.id = 15;
+		one.name = "learning java";
+		one.status = "Waiting for time";
 		try {
 			taskDAO.createTask(one);
 		} catch (DAOException e) {
@@ -29,9 +29,9 @@ public class TestTaskDAO {
 		TaskDAO taskDAO = new TaskDAO();
 
 		Task one = new Task();
-		one.id = 7;
-		one.name = "Play with rain";
-		one.status = "Waiting for rain";
+		one.id = 15;
+		one.name = "learning java";
+		one.status = "Waiting for time";
 		try {
 			taskDAO.updateTask(one);
 		} catch (DAOException e) {
