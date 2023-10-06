@@ -7,8 +7,6 @@ public class StaticVsInstance {
 		InstanceCounter.main(args);
 		System.out.println(InstanceCounter.instanceCount);
 	}
-}
-
 class StaticVariableDemo {
 	// Declare a static variable
 	public static int staticVariable = 5;
